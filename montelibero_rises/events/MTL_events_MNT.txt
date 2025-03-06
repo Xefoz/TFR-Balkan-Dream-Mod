@@ -1,0 +1,24 @@
+﻿###########################
+# Montenegro Events
+###########################
+
+add_namespace = montenegro
+
+# INTRO EVENT #
+country_event = {
+	id = montenegro.0
+	title = montenegro.0.t
+	desc = montenegro.0.d
+	picture = GFX_TRA_intro_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = MNT
+	}
+
+	option = {
+	name = montenegro.0.a
+	}
+}

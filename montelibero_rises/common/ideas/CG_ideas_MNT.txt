@@ -1,0 +1,5 @@
+﻿ideas = {
+	country = {
+		montenegro_protests = {
+		}
+
