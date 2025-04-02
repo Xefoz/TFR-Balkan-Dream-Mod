@@ -1,0 +1,289 @@
+focus_tree = {
+	id = bd-mnt-focuses
+	continuous_focus_position = { x = -40 y = 1050 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MNT
+		}
+	}
+	#Переговоры с СПЦ
+	focus = {
+		id = MNT_peregovorysspc
+		icon = GFX_MNT_peregovorysspc-796739
+		x = 11
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_zakonosvobodeveroispovedaniya  }
+	}
+
+	#Укрепить власть ДПС
+	focus = {
+		id = MNT_ukrepitvlastdps
+		icon = GFX_MNT_ukrepitvlastdps-796739
+		x = 2
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_prodvigatchpc  }
+	}
+
+	#Закон о свободе вероисповедания
+	focus = {
+		id = MNT_zakonosvobodeveroispovedaniya
+		icon = GFX_MNT_zakonosvobodeveroispovedaniya-796739
+		x = 7
+		y = 0
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Продвигать ЧПЦ
+	focus = {
+		id = MNT_prodvigatchpc
+		icon = GFX_MNT_prodvigatchpc-796739
+		x = 3
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_zakonosvobodeveroispovedaniya  }
+		mutually_exclusive = { focus = MNT_peregovorysspc  }
+	}
+
+	#Оценить положение в экономике
+	focus = {
+		id = MNT_ocenitpolozhenievekonomike
+		icon = GFX_MNT_ocenitpolozhenievekonomike-796739
+		x = 7
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = MNT_zakonosvobodeveroispovedaniya  }
+	}
+
+	#Найти сербский след
+	focus = {
+		id = MNT_naytiserbskiysled
+		icon = GFX_MNT_naytiserbskiysled-796739
+		x = 4
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_prodvigatchpc  }
+	}
+
+	#Арестовать сербских юнионистов
+	focus = {
+		id = MNT_arestovatserbskihyunionistov
+		icon = GFX_MNT_arestovatserbskihyunionistov-796739
+		x = 3
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_naytiserbskiysled  focus = MNT_ukrepitvlastdps  }
+	}
+
+	#Распространить антисербскую пропаганду
+	focus = {
+		id = MNT_rasprostranitantiserbskuyupropagandu
+		icon = GFX_MNT_rasprostranitantiserbskuyupropagandu-796739
+		x = 2
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_arestovatserbskihyunionistov  }
+	}
+
+	#Жесткие меры
+	focus = {
+		id = MNT_zhestkiemery
+		icon = GFX_MNT_zhestkiemery-796739
+		x = 4
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_arestovatserbskihyunionistov  }
+	}
+
+	#Диктатура не пошатнется
+	focus = {
+		id = MNT_diktaturaneposhatnetsya
+		icon = GFX_MNT_diktaturaneposhatnetsya-796739
+		x = 3
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_rasprostranitantiserbskuyupropagandu  focus = MNT_zhestkiemery  }
+	}
+
+	#Ввести меры профилактики
+	focus = {
+		id = MNT_vvestimeryprofilaktiki
+		icon = GFX_MNT_vvestimeryprofilaktiki-796739
+		x = 6
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_ocenitpolozhenievekonomike  }
+	}
+
+	#Ввести комендантский час
+	focus = {
+		id = MNT_vvestikomendantskiychas
+		icon = GFX_MNT_vvestikomendantskiychas-796739
+		x = 6
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_vvestimeryprofilaktiki  }
+	}
+
+	#Субсидии турфирмам
+	focus = {
+		id = MNT_subsidiiturfirmam
+		icon = GFX_MNT_subsidiiturfirmam-796739
+		x = 8
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	#undefined
+	focus = {
+		id = MNT_undefined
+		icon = GFX_focus_usa_focus_on_europe
+		x = 7
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = MNT_diktaturaneposhatnetsya  }
+	}
+
+	#Перенять шведскую модель
+	focus = {
+		id = MNT_perenyatshvedskuyumodel
+		icon = GFX_MNT_perenyatshvedskuyumodel-796739
+		x = 8
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	#Первая страна Европы, победившая Коронавирус
+	focus = {
+		id = MNT_pervayastranaevropypobedivshayakoronavirus
+		icon = GFX_MNT_pervayastranaevropypobedivshayakoronavirus-796739
+		x = 5
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	#Никакого коронавируса
+	focus = {
+		id = MNT_nikakogokoronavirusa
+		icon = GFX_MNT_nikakogokoronavirusa-796739
+		x = 9
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Умиротворение сербских Юнионистов
+	focus = {
+		id = MNT_umirotvorenieserbskihyunionistov
+		icon = GFX_MNT_umirotvorenieserbskihyunionistov-796739
+		x = 10
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Разгромить Черногорских Националистов
+	focus = {
+		id = MNT_razgromitchernogorskihnacionalistov
+		icon = GFX_MNT_razgromitchernogorskihnacionalistov-796739
+		x = 12
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Договориться об уступках
+	focus = {
+		id = MNT_dogovoritsyaobustupkah
+		icon = GFX_MNT_dogovoritsyaobustupkah-796739
+		x = 10
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Поддержать умеренное крыло ДПС
+	focus = {
+		id = MNT_podderzhatumerennoekrylodps
+		icon = GFX_MNT_podderzhatumerennoekrylodps-796739
+		x = 11
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Вопрос о Евроинтеграции
+	focus = {
+		id = MNT_voprosoevrointegracii
+		icon = GFX_MNT_voprosoevrointegracii-796739
+		x = 12
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Сформировать новое правительство
+	focus = {
+		id = MNT_sformirovatnovoepravitelstvo
+		icon = GFX_MNT_sformirovatnovoepravitelstvo-796739
+		x = 11
+		y = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+}

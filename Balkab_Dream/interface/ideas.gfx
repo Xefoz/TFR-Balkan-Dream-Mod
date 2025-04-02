@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "MNT_protests"
+        texturefile = "gfx\interface\ideas\MNT\MNT_protests.png"
+    }
+}
