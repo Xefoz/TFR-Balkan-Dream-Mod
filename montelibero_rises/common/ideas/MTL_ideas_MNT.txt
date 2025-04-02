@@ -1,5 +1,0 @@
-﻿ideas = {
-	country = {
-		MNT_protests = {
-		}
-
